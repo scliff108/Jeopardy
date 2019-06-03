@@ -34,17 +34,32 @@ function setScoreboard() {
     });
 }
 
+function nextQuestion() {
+    incrementTeam();
+    console.log("Current Team " + currentTeam);
+    $('#questionModal').modal('hide');
+    whosTurnIsIt();
+    setScoreboard();
+}
 
 $(document).ready(function() {
+    var category = '';
     var money = '';
+    var questionid = '';
+
     whosTurnIsIt();
     setScoreboard();
 
+    $('a').click(function() {
+        $(this).addClass('isDisabled');
+        $(this).children().addClass('disabled');
+    });
+
     $('#questionModal').on('shown.bs.modal', function(event) {
         var link = $(event.relatedTarget);
-        var category = link.data('category');
+        category = link.data('category');
         money = link.data('money');
-        var questionid = link.data('questionid');
+        questionid = link.data('questionid');
     
         var modal = $(this);
         modal.find('.modal-title').text(categories[category] + ' for $' + money);
@@ -53,10 +68,11 @@ $(document).ready(function() {
 
     $('#correct').click(function() {
         teams[currentTeam][1] += parseInt(money);
-        incrementTeam();
-        console.log("Current Team " + currentTeam);
-        $('#questionModal').modal('hide');
-        whosTurnIsIt();
-        setScoreboard();
+        nextQuestion();
+    });
+
+    $('#incorrect').click(function() {
+        teams[currentTeam][1] -= parseInt(money);
+        nextQuestion();
     });
 });

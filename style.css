@@ -15,3 +15,7 @@
 a:hover {
     text-decoration: none;
 }
+.isDisabled {
+    pointer-events: none;
+    cursor: not-allowed;
+}
