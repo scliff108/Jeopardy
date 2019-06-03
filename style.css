@@ -15,6 +15,9 @@
 a:hover {
     text-decoration: none;
 }
+.list-group-item.disabled {
+    color: white;
+}
 .isDisabled {
     pointer-events: none;
     cursor: not-allowed;

@@ -1,17 +1,87 @@
-var categories = ['cat 1', 'cat 2', 'cat 3', 'cat 4', 'cat 5'];
+var categories = ['Sports', 'Programming', 'Quick Maths', 'Music', 'Disney/Pixar'];
 var questions = [
-    ['question 1', 'question 2', 'question 3', 'question 4', 'question 5'],
-    ['question 1', 'question 2', 'question 3', 'question 4', 'question 5'],
-    ['question 1', 'question 2', 'question 3', 'question 4', 'question 5'],
-    ['question 1', 'question 2', 'question 3', 'question 4', 'question 5'],
-    ['question 1', 'question 2', 'question 3', 'question 4', 'question 5']
-]
+    [ // Sports
+        'This team won the 2018 World Series.', // Who are the Boston Red Sox?
+        'This NBA Player and Coach has 11 NBA Titles, the most ever.', // Who is Bill Russell?
+        'This team just won the Champions League Final.', // Who is Liverpool?
+        'The Masters, "A Tradition Unlike Any Other," is played at this golf course.', // What is Augusta National
+        'This football (soccer) award given to The Best FIFA Men\'s Player is French for "Golden Ball."' // What is Ballon d'Or
+    ],
+    [ // Programming
+        'question 1', // 
+        'question 2', // 
+        'question 3', // 
+        'question 4', // 
+        'question 5' // 
+    ],
+    [ // Quick Maths
+        'question 1', // 
+        'question 2', // 
+        'question 3', // 
+        'question 4', // 
+        'question 5' // 
+    ],
+    [ // Music
+        'question 1', // 
+        'question 2', // 
+        'question 3', // 
+        'question 4', // 
+        'question 5' // 
+    ],
+    [ // Disney/Pixar
+        'question 1', // 
+        'question 2', // 
+        'question 3', // 
+        'question 4', // 
+        'question 5' // 
+    ]
+];
 var teams = [
     ['Team 1', 0],
     ['Team 2', 0],
     ['Team 3', 0]
 ];
 var currentTeam = 0;
+
+function setupBoard() {
+    for (var i = 0; i < categories.length; i++) {
+        var col = document.createElement('div');
+        col.className = 'col-sm text-center';
+        var card = document.createElement('div');
+        card.className = 'card';
+
+        var cardHeader = document.createElement('div');
+        cardHeader.className = 'card-header';
+        var header = document.createElement('h2');
+        var headerText = document.createTextNode(categories[i]);
+        header.appendChild(headerText);
+
+        var list = document.createElement('ul');
+        list.className = 'list-group list-group-flush';
+        for (var j = 0; j < questions[i].length; j++) {
+            var link = document.createElement('a');
+            link.setAttribute('href', '');
+            link.setAttribute('data-toggle','modal');
+            link.setAttribute('data-target', '#questionModal');
+            link.setAttribute('data-category', i.toString())
+            link.setAttribute('data-money', ((j+1)*100).toString());
+            link.setAttribute('data-questionid', j.toString());
+            var listItem = document.createElement('li');
+            listItem.className = 'list-group-item';
+            var amount = document.createTextNode('$' + (j+1)*100);
+            listItem.appendChild(amount);
+            
+            list.append(link);
+            link.append(listItem);
+        }
+
+        $('#gameBoard').append(col);
+        col.append(card);
+        card.append(cardHeader);
+        cardHeader.append(header);
+        card.append(list);
+    }
+}
 
 function incrementTeam() {
     console.log(teams.length)
@@ -47,6 +117,7 @@ $(document).ready(function() {
     var money = '';
     var questionid = '';
 
+    setupBoard();
     whosTurnIsIt();
     setScoreboard();
 
