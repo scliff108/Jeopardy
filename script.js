@@ -29,11 +29,11 @@ var questions = [
         'This is the highest paid artist of 2018 making $118 million.' // Who is U2?
     ],
     [ // Disney/Pixar
-        '', // 
-        '', // 
-        '', // 
-        '', // 
-        '' // 
+        'Even miracles take a little time.', // Who is the Fairy Godmother from Cinderella?
+        'Ohana means family. Family means no one gets left behind.', // Who is Lilo from Lilo and Stitch?
+        'You\'re braver than you believe, and stronger than you seem, and smarter than you think.', // Who is Winnie the Pooh?
+        'The problem is not the problem. The problem is your attitude about the problem.', // Who is Jack Sparrow from Pirates of the Caribbean?
+        'You control your destiny -- you don\'t need magic to do it. And there are no magical shortcuts to solving your problems.' // Who is Merida from Brave?
     ]
 ];
 var teams = [
