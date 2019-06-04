@@ -15,10 +15,16 @@
 a:hover {
     text-decoration: none;
 }
+.list-group-item {
+    font-size: 2rem;
+}
 .list-group-item.disabled {
     color: white;
 }
 .isDisabled {
     pointer-events: none;
     cursor: not-allowed;
+}
+p {
+    font-size: 4rem;
 }

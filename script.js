@@ -99,7 +99,7 @@ function whosTurnIsIt() {
 function setScoreboard() {
     $('#scoreboard').empty();
     teams.forEach(function(team) {
-        var s = '<p">' + team[0] + ': $' + team[1] + '</p>';
+        var s = '<p>' + team[0] + ': $' + team[1] + '</p>';
         $('#scoreboard').append(s);
     });
 }
