@@ -4,36 +4,36 @@ var questions = [
         'This team won the 2018 World Series.', // Who are the Boston Red Sox?
         'This NBA Player and Coach has 11 NBA Titles, the most ever.', // Who is Bill Russell?
         'This team just won the Champions League Final.', // Who is Liverpool?
-        'The Masters, "A Tradition Unlike Any Other," is played at this golf course.', // What is Augusta National
-        'This football (soccer) award given to The Best FIFA Men\'s Player is French for "Golden Ball."' // What is Ballon d'Or
+        'The Masters, "A Tradition Unlike Any Other," is played at this golf course.', // What is Augusta National?
+        'This football (soccer) award given to The Best FIFA Men\'s Player is French for "Golden Ball."' // What is the Ballon d'Or?
     ],
     [ // Programming
-        'question 1', // 
-        'question 2', // 
-        'question 3', // 
-        'question 4', // 
-        'question 5' // 
+        'This is a list of steps to accomplish a task.', // What is an algorithm?
+        'This command will allow you to change Tracy\'s position to any x and y coordinate.', // What is setposition?
+        'The size of Tracy\'s Grid World.', // What is 400px by 400px?
+        'These are the 4 naming guideline.', // What is specific, has no capital letters, has underscores instead of spaces, and does not start with a number?
+        'This man invented Python.' // Who is Guido van Rossum?
     ],
     [ // Quick Maths
-        'question 1', // 
-        'question 2', // 
-        'question 3', // 
-        'question 4', // 
-        'question 5' // 
+        '13x9', // What is 117?
+        'This shape has 8 sides.', // What is an octagon?
+        'The interior angle of a hexagon.', // What is 120 degrees?
+        'These are the first 5 prime numbers.', // What are 2, 3, 5, 7, 11?
+        '2 to the 8th power' // What is 256?
     ],
     [ // Music
-        'question 1', // 
-        'question 2', // 
-        'question 3', // 
-        'question 4', // 
-        'question 5' // 
+        'This artist played Sicko Mode at the Super Bowl.', // Who is Travis Scott?
+        'Lil Nas X got his Cowboy Hat from this fashion store.', // What is Gucci?
+        'This is Weezy F. Baby\'s last name.', // What is Carter?
+        'You must sell this many albums to go platinum.', // What is 1 million albums?
+        'This is the highest paid artist of 2018 making $118 million.' // Who is U2?
     ],
     [ // Disney/Pixar
-        'question 1', // 
-        'question 2', // 
-        'question 3', // 
-        'question 4', // 
-        'question 5' // 
+        '', // 
+        '', // 
+        '', // 
+        '', // 
+        '' // 
     ]
 ];
 var teams = [
